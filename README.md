@@ -1,14 +1,14 @@
-# Smart Irrigation Digital Twin System
+# Agrio Smart Irrigation Landing
 
-Professional React/Vite landing page for an AI + IoT + Digital Twin smart irrigation platform focused on smarter water management for modern agriculture.
+Client-facing React/Vite landing page for Agrio Smart Irrigation, focused on water saving, clear field visibility, and practical irrigation planning.
 
 ## Features
 
 - Premium dark landing page with emerald accents and realistic agriculture imagery
 - Sticky responsive navbar with mobile menu and smooth section navigation
-- Hero section with dashboard mockup, KPI badges, and CTA links
-- Full section flow: stats, problem, features, Digital Twin, dashboard, process, water management, AI forecasting, market, benefits, testimonials, contact, CTA, and footer
-- Recharts dashboard preview with soil moisture, temperature, humidity, water usage, irrigation status, sensor health, and AI recommendation
+- Hero section with farm preview, KPI badges, and demo CTA links
+- Full section flow: stats, challenge, solution, farm view, preview, process, water management, planning, market, benefits, use cases, contact, CTA, and footer
+- Recharts preview with soil moisture, temperature, humidity, water usage, irrigation status, device status, and recommended action
 - WhatsApp and email direct contact links, configured through Vite environment variables
 - Logo asset wired into navbar, footer, and browser favicon
 
@@ -69,7 +69,7 @@ Replace that file with the final brand logo when available. Keep the same filena
 The required alt text is already applied:
 
 ```txt
-Smart Irrigation Digital Twin System logo
+Agrio Smart Irrigation logo
 ```
 
 ## Assets
@@ -84,7 +84,7 @@ Recommended image themes:
 
 - Irrigated agricultural field for the hero
 - Drip or sprinkler irrigation for water management
-- Farmer or smart farming with tablet for AI forecasting
+- Farmer or smart farming with tablet for irrigation planning
 - Field, greenhouse, and crop imagery for market and CTA sections
 
 ## Notes

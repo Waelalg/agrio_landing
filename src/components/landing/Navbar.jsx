@@ -30,8 +30,8 @@ export default function Navbar() {
         </div>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a href="#dashboard" className="rounded-full px-5 py-2.5 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300">Login</a>
-          <a href="#contact" className="rounded-full bg-emerald-400 px-5 py-2.5 text-sm font-bold text-emerald-950 shadow-lg shadow-emerald-500/25 transition hover:bg-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300">Get Started</a>
+          <a href="#preview" className="rounded-full px-5 py-2.5 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300">View Demo</a>
+          <a href="#contact" className="rounded-full bg-emerald-400 px-5 py-2.5 text-sm font-bold text-emerald-950 shadow-lg shadow-emerald-500/25 transition hover:bg-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300">Request Demo</a>
         </div>
 
         <button
@@ -55,8 +55,8 @@ export default function Navbar() {
               </a>
             ))}
             <div className="grid grid-cols-2 gap-2 pt-2">
-              <a href="#dashboard" onClick={() => setOpen(false)} className="rounded-2xl border border-white/10 px-4 py-3 text-center font-semibold text-white">Login</a>
-              <a href="#contact" onClick={() => setOpen(false)} className="rounded-2xl bg-emerald-400 px-4 py-3 text-center font-bold text-emerald-950">Get Started</a>
+              <a href="#preview" onClick={() => setOpen(false)} className="rounded-2xl border border-white/10 px-4 py-3 text-center font-semibold text-white">View Demo</a>
+              <a href="#contact" onClick={() => setOpen(false)} className="rounded-2xl bg-emerald-400 px-4 py-3 text-center font-bold text-emerald-950">Request Demo</a>
             </div>
           </div>
         </div>

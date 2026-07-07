@@ -42,11 +42,11 @@ export default function DashboardPreview({ compact = false }) {
     >
       <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-emerald-300">Live Farm Dashboard</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-emerald-300">Farm Overview</p>
           <h3 className="mt-2 text-2xl font-bold text-white">Zone A Monitoring</h3>
         </div>
         <div className="flex items-center gap-2 rounded-full bg-emerald-400/15 px-4 py-2 text-sm font-semibold text-emerald-200">
-          <span className="h-2 w-2 rounded-full bg-emerald-300" /> Sensors online
+          <span className="h-2 w-2 rounded-full bg-emerald-300" /> Field data online
         </div>
       </div>
 
@@ -56,13 +56,13 @@ export default function DashboardPreview({ compact = false }) {
         <Metric icon={Activity} value="61%" label="Humidity" note="Air" />
         <Metric icon={Gauge} value="120L" label="Water Usage Today" note="Total" />
         <Metric icon={CalendarClock} value="Scheduled" label="Irrigation Status" note="06:30" />
-        <Metric icon={Wifi} value="12/12" label="Sensor Health" note="Online" />
+        <Metric icon={Wifi} value="12/12" label="Device Status" note="Online" />
       </div>
 
       <div className={`mt-4 grid gap-4 ${compact ? '' : 'lg:grid-cols-[1.35fr_.85fr]'}`}>
         <div className="rounded-3xl border border-white/10 bg-white/[0.045] p-4">
           <div className="mb-4 flex items-center justify-between gap-3">
-            <h4 className="font-semibold text-white">Soil Moisture Forecast</h4>
+            <h4 className="font-semibold text-white">Soil Moisture Trend</h4>
             <span className="rounded-full bg-emerald-400/10 px-3 py-1 text-xs text-emerald-200">Next 15h</span>
           </div>
           <div className="h-56">
@@ -87,10 +87,10 @@ export default function DashboardPreview({ compact = false }) {
           <div className="rounded-3xl border border-emerald-300/20 bg-emerald-400/[0.08] p-5">
             <div className="flex items-center gap-3 text-emerald-200">
               <BrainCircuit />
-              <span className="font-semibold">AI Recommendation</span>
+              <span className="font-semibold">Recommended Action</span>
             </div>
             <p className="mt-4 text-lg font-bold text-white">Irrigate Zone A for 18 minutes</p>
-            <p className="mt-2 text-sm leading-6 text-emerald-50/65">Confidence 92%. Expected soil moisture after irrigation: 58%.</p>
+            <p className="mt-2 text-sm leading-6 text-emerald-50/65">High confidence. Expected soil moisture after irrigation: 58%.</p>
           </div>
           <div className="rounded-3xl border border-white/10 bg-white/[0.045] p-4">
             <div className="mb-3 flex items-center justify-between gap-3">

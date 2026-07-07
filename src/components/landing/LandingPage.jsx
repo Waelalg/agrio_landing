@@ -31,7 +31,7 @@ function Section({ id, children, className = '' }) {
 }
 
 function HeroSection() {
-  const kpis = ['35% Water Saving', '24/7 Monitoring', 'AI Recommendations', 'Smart Sensors'];
+  const kpis = ['Up to 35% Water Saving', '24/7 Field Visibility', 'Clear Irrigation Advice', 'Multi-Zone Management'];
 
   return (
     <section id="home" className="relative min-h-screen overflow-hidden pt-24">
@@ -42,7 +42,7 @@ function HeroSection() {
       <div className="relative mx-auto grid min-h-[calc(100vh-6rem)] max-w-7xl items-center gap-12 px-5 py-20 lg:grid-cols-[1fr_.95fr] lg:px-8">
         <motion.div initial="hidden" animate="show" transition={{ staggerChildren: 0.12 }} className="hero-copy min-w-0">
           <motion.div variants={fadeUp} className="mb-6 inline-flex rounded-full border border-emerald-300/20 bg-emerald-400/10 px-4 py-2 text-sm font-semibold text-emerald-200 backdrop-blur">
-            AI + IoT + Digital Twin for Algerian Agriculture
+            Smart water management for modern farms
           </motion.div>
           <motion.h1 variants={fadeUp} className="text-3xl font-black leading-tight tracking-tight text-white sm:text-5xl md:text-7xl">
             <span className="block">Agrio Smart</span>
@@ -50,14 +50,14 @@ function HeroSection() {
             <span className="block">Smarter Agriculture</span>
           </motion.h1>
           <motion.p variants={fadeUp} className="mt-6 max-w-2xl text-lg leading-8 text-emerald-50/80 md:text-xl">
-            Monitor soil conditions, predict irrigation needs, and optimize water usage in real time using IoT sensors, artificial intelligence, and Digital Twin technology.
+            Agrio helps farmers see field conditions clearly, reduce water waste, and plan irrigation with confidence from one simple platform.
           </motion.p>
           <motion.div variants={fadeUp} className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a href="#features" className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-400 px-7 py-4 font-bold text-emerald-950 shadow-xl shadow-emerald-500/25 transition hover:bg-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300">
-              Explore Platform <ArrowRight size={18} />
+              See the Solution <ArrowRight size={18} />
             </a>
             <a href="#contact" className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-7 py-4 font-bold text-white backdrop-blur transition hover:bg-white/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300">
-              Contact Us
+              Request a Demo
             </a>
           </motion.div>
           <motion.div variants={fadeUp} className="mt-8 grid grid-cols-2 gap-3 text-sm text-emerald-50/75 sm:flex sm:flex-wrap">
@@ -100,7 +100,7 @@ function ProblemSection() {
     <Section id="problem">
       <div className="grid items-center gap-12 lg:grid-cols-2">
         <div>
-          <SectionHeader align="left" eyebrow="The Problem" title="Traditional Irrigation Wastes Water and Reduces Efficiency" description="Farmers often irrigate without accurate soil data, while weather and soil conditions change quickly. A smart platform makes irrigation decisions visible, measurable, and easier to optimize." />
+          <SectionHeader align="left" eyebrow="The Challenge" title="Irrigation Decisions Are Still Too Hard to Control" description="Water, weather, and soil conditions change quickly. Agrio gives farmers a practical view of what is happening and what should be done next." />
           <div className="grid gap-4 sm:grid-cols-2">
             {problems.map(({ icon: Icon, title, text }) => (
               <div key={title} className="glass rounded-3xl p-5">
@@ -115,7 +115,7 @@ function ProblemSection() {
           <img src={images.sprinkler} alt="Sprinkler irrigation watering an agricultural field" loading="lazy" className="h-[420px] w-full object-cover md:h-[520px]" />
           <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-transparent to-transparent" />
           <div className="absolute bottom-6 left-6 right-6 rounded-3xl bg-black/45 p-5 backdrop-blur-xl">
-            <p className="text-sm text-emerald-100/75">Smart irrigation uses field data to reduce guesswork and improve timing.</p>
+            <p className="text-sm text-emerald-100/75">Agrio helps teams reduce guesswork, protect crops, and use water at the right moment.</p>
           </div>
         </motion.div>
       </div>
@@ -126,7 +126,7 @@ function ProblemSection() {
 function FeaturesSection() {
   return (
     <Section id="features">
-      <SectionHeader eyebrow="Features" title="Everything Needed for Data-Driven Irrigation" description="From IoT data collection to AI recommendations, every component helps farmers monitor, predict, and optimize irrigation." />
+      <SectionHeader eyebrow="Solution" title="A Clear Irrigation Assistant for Daily Farm Work" description="Agrio brings field status, water use, alerts, and irrigation advice into one simple experience built for real operations." />
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
         {features.map((feature) => <FeatureCard key={feature.title} {...feature} />)}
       </div>
@@ -136,19 +136,19 @@ function FeaturesSection() {
 
 function DigitalTwinSection() {
   const nodes = [
-    { label: 'Sensors', icon: RadioTower },
-    { label: 'IoT Device', icon: Cpu },
-    { label: 'Platform', icon: ShieldCheck },
-    { label: 'Digital Twin', icon: Droplets },
-    { label: 'AI Decision', icon: BrainCircuit },
+    { label: 'Field Data', icon: RadioTower },
+    { label: 'Connected Device', icon: Cpu },
+    { label: 'Farm View', icon: ShieldCheck },
+    { label: 'Zone Status', icon: Droplets },
+    { label: 'Recommended Action', icon: BrainCircuit },
     { label: 'Irrigation Action', icon: Droplets },
   ];
 
   return (
-    <Section id="digital-twin">
+    <Section id="farm-view">
       <div className="grid items-center gap-12 lg:grid-cols-[.9fr_1.1fr]">
         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative overflow-hidden rounded-[2rem] border border-white/10">
-          <img src={images.field} alt="Wide agricultural field monitored by a digital twin platform" loading="lazy" className="h-[430px] w-full object-cover md:h-[560px]" />
+          <img src={images.field} alt="Wide agricultural field monitored by a smart irrigation platform" loading="lazy" className="h-[430px] w-full object-cover md:h-[560px]" />
           <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/35 to-emerald-500/20" />
           <div className="absolute left-5 right-5 top-5 grid gap-3 sm:grid-cols-2">
             {nodes.slice(0, 4).map(({ label }) => (
@@ -157,7 +157,7 @@ function DigitalTwinSection() {
           </div>
         </motion.div>
         <div>
-          <SectionHeader align="left" eyebrow="Digital Twin" title="A Virtual Farm That Updates in Real Time" description="The platform creates a virtual replica of agricultural environments to simulate, analyze, and optimize irrigation strategies in real time." />
+          <SectionHeader align="left" eyebrow="Farm View" title="See Each Zone Clearly Before You Irrigate" description="The farm is organized by zone so owners and operators can quickly understand moisture, risk, and the next best action." />
           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
             {nodes.map(({ label, icon: Icon }, index) => (
               <motion.div key={label} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.04 }} className="relative rounded-2xl border border-white/10 bg-white/[0.055] p-4">
@@ -177,8 +177,8 @@ function DigitalTwinSection() {
 
 function DashboardSection() {
   return (
-    <Section id="dashboard">
-      <SectionHeader eyebrow="Dashboard" title="A Professional Monitoring Interface" description="A realistic dashboard preview showing sensor status, water usage, AI recommendations, irrigation status, and forecasting widgets." />
+    <Section id="preview">
+      <SectionHeader eyebrow="Preview" title="A Simple Interface for Farm Decisions" description="A clear view of field moisture, water usage, irrigation status, and the recommended next action." />
       <DashboardPreview />
     </Section>
   );
@@ -187,7 +187,7 @@ function DashboardSection() {
 function HowItWorksSection() {
   return (
     <Section id="how-it-works">
-      <SectionHeader eyebrow="Process" title="How It Works" description="A simple flow from field data to intelligent irrigation decisions." />
+      <SectionHeader eyebrow="Process" title="How It Works" description="A simple flow from field observation to a practical irrigation decision." />
       <div className="grid gap-5 lg:grid-cols-4">
         {steps.map(({ icon: Icon, title, text }, index) => (
           <motion.div key={title} initial={{ opacity: 0, y: 22 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.08 }} className="glass relative rounded-3xl p-6">
@@ -209,7 +209,7 @@ function WaterManagementSection() {
     <Section id="water">
       <div className="grid items-center gap-12 lg:grid-cols-2">
         <div>
-          <SectionHeader align="left" eyebrow="Water Management" title="Optimize Every Drop of Water" description="Smart resource allocation helps reduce waste, improve irrigation timing, and support more sustainable agriculture." />
+          <SectionHeader align="left" eyebrow="Water Management" title="Use Water Where It Matters Most" description="Agrio helps reduce waste, improve irrigation timing, and support more sustainable agriculture." />
           <div className="grid gap-4 sm:grid-cols-2">
             {['Reduce waste', 'Improve distribution', 'Save water', 'Support sustainability'].map((item) => (
               <div key={item} className="flex items-center gap-3 rounded-2xl bg-white/[0.055] p-4">
@@ -234,18 +234,18 @@ function WaterManagementSection() {
 
 function AIForecastingSection() {
   return (
-    <Section id="ai">
+    <Section id="planning">
       <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_.95fr]">
         <div className="relative overflow-hidden rounded-[2rem] border border-white/10">
           <img src={images.farmer} alt="Farmer reviewing smart farming conditions in an agricultural field" loading="lazy" className="h-[430px] w-full object-cover md:h-[560px]" />
           <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/30 to-emerald-500/20" />
         </div>
         <div>
-          <SectionHeader align="left" eyebrow="AI & Forecasting" title="Forecast Future Irrigation Needs" description="The AI layer estimates future soil moisture, irrigation timing, confidence levels, and recommended duration for smarter decisions." />
+          <SectionHeader align="left" eyebrow="Planning" title="Plan the Next Irrigation Before Stress Appears" description="Agrio estimates upcoming field needs and turns them into simple timing and duration guidance." />
           <div className="grid gap-4 sm:grid-cols-2">
             {[
               ['Next Irrigation', 'Tomorrow 06:30'],
-              ['AI Confidence', '92%'],
+              ['Recommendation Confidence', '92%'],
               ['Risk Level', 'Medium'],
               ['Recommended Duration', '18 min'],
             ].map(([label, value]) => (
@@ -264,7 +264,7 @@ function AIForecastingSection() {
 function TargetMarketSection() {
   return (
     <Section id="market">
-      <SectionHeader eyebrow="Target Market" title="Built for Modern Agriculture" description="A flexible showcase for open-field farms, greenhouses, research labs, and smart agriculture programs across Algeria." />
+      <SectionHeader eyebrow="Who It Helps" title="Built for Practical Agriculture" description="Agrio is suitable for open-field farms, greenhouses, cooperatives, and agricultural projects that want better water control." />
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
         {markets.map(({ title, text, image, alt }) => (
           <motion.div key={title} whileHover={{ y: -8 }} className="group relative h-80 overflow-hidden rounded-[2rem] border border-white/10">
@@ -284,7 +284,7 @@ function TargetMarketSection() {
 function BenefitsSection() {
   return (
     <Section id="benefits">
-      <SectionHeader eyebrow="Benefits" title="Why Smart Irrigation Matters" description="A practical solution for water saving, automation, real-time insights, and sustainable farming." />
+      <SectionHeader eyebrow="Benefits" title="Why Clients Choose Agrio" description="A practical solution for water saving, better visibility, faster action, and sustainable farming." />
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {benefits.map((benefit) => <FeatureCard key={benefit.title} {...benefit} description={benefit.text} />)}
       </div>
@@ -295,7 +295,7 @@ function BenefitsSection() {
 function UseCasesSection() {
   return (
     <Section id="use-cases">
-      <SectionHeader eyebrow="Use Cases" title="Real Smart Irrigation Scenarios" description="Concrete landing-page examples showing where Agrio can be deployed in farms, connected irrigation systems, and precision water-saving workflows." />
+      <SectionHeader eyebrow="Use Cases" title="Where Agrio Fits Best" description="Common scenarios where Agrio helps farms and agriculture projects manage irrigation more clearly." />
       <div className="grid gap-5 md:grid-cols-3">
         {useCases.map((item) => (
           <div key={item.title} className="glass overflow-hidden rounded-3xl">
@@ -318,7 +318,7 @@ function UseCasesSection() {
 function FoundersSection() {
   return (
     <Section id="founders">
-      <SectionHeader eyebrow="Founders" title="Built by Said SENHADJI et LEBAILI Mohamed Ouail" description="Agrio combines practical agricultural needs with AI, IoT, and Digital Twin engineering for smarter irrigation decisions." />
+      <SectionHeader eyebrow="Team" title="Built by Said SENHADJI et LEBAILI Mohamed Ouail" description="Agrio combines field understanding with product development to make irrigation decisions easier for clients." />
       <div className="grid items-stretch gap-5 md:grid-cols-2">
         {founders.map((founder) => (
           <motion.div key={founder.name} whileHover={{ y: -8 }} className="glass overflow-hidden rounded-[2rem]">
@@ -341,7 +341,7 @@ function FoundersSection() {
 function ContactSection() {
   return (
     <Section id="contact">
-      <SectionHeader eyebrow="Contact" title="Contactez-nous" description="Vous souhaitez decouvrir la plateforme ou discuter d une demonstration ? Contactez-nous directement par WhatsApp ou par email." />
+      <SectionHeader eyebrow="Contact" title="Contactez-nous" description="Vous souhaitez decouvrir Agrio ou planifier une demonstration ? Contactez-nous directement par WhatsApp ou par email." />
       <div className="grid items-stretch gap-5 lg:grid-cols-[.85fr_1.15fr]">
         <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.055] p-8">
           <img src="/assets/logo/agrio-logo.png" alt="Agrio logo" loading="lazy" className="mx-auto h-52 w-52 object-contain" />
@@ -366,11 +366,11 @@ function CTASection() {
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-emerald-900/40" />
         <div className="relative max-w-2xl">
           <ShieldCheck className="mb-6 text-emerald-300" size={42} aria-hidden="true" />
-          <h2 className="text-3xl font-black text-white md:text-5xl">Transform Agriculture with Intelligent Irrigation</h2>
-          <p className="mt-5 text-lg leading-8 text-emerald-50/75">Start building a smarter and more sustainable irrigation future with AI, IoT, and Digital Twin technology.</p>
+          <h2 className="text-3xl font-black text-white md:text-5xl">Make Irrigation Easier to Manage</h2>
+          <p className="mt-5 text-lg leading-8 text-emerald-50/75">Give your farm team clear visibility, better water timing, and practical recommendations for every zone.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href="#contact" className="rounded-full bg-emerald-400 px-7 py-4 text-center font-bold text-emerald-950 transition hover:bg-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300">Start Now</a>
-            <a href="#features" className="rounded-full border border-white/15 bg-white/10 px-7 py-4 text-center font-bold text-white backdrop-blur transition hover:bg-white/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300">Learn More</a>
+            <a href="#contact" className="rounded-full bg-emerald-400 px-7 py-4 text-center font-bold text-emerald-950 transition hover:bg-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300">Request a Demo</a>
+            <a href="#features" className="rounded-full border border-white/15 bg-white/10 px-7 py-4 text-center font-bold text-white backdrop-blur transition hover:bg-white/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300">Explore Benefits</a>
           </div>
         </div>
       </div>
@@ -384,13 +384,13 @@ function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-center md:justify-between">
         <div>
           <BrandLogo />
-          <p className="mt-3 max-w-md text-sm leading-6 text-emerald-50/55">AI + IoT + Digital Twin platform for smarter irrigation and water optimization in modern agriculture.</p>
+          <p className="mt-3 max-w-md text-sm leading-6 text-emerald-50/55">Smart irrigation platform for clearer farm decisions and better water use.</p>
           <p className="mt-2 max-w-md text-sm leading-6 text-emerald-50/45">Founders: Said SENHADJI et LEBAILI Mohamed Ouail</p>
         </div>
         <div className="flex flex-wrap gap-4 text-sm text-emerald-50/65">
-          <a href="#features" className="hover:text-white">Features</a>
-          <a href="#digital-twin" className="hover:text-white">Digital Twin</a>
-          <a href="#dashboard" className="hover:text-white">Dashboard</a>
+          <a href="#features" className="hover:text-white">Solution</a>
+          <a href="#farm-view" className="hover:text-white">Farm View</a>
+          <a href="#preview" className="hover:text-white">Preview</a>
           <a href="#use-cases" className="hover:text-white">Use Cases</a>
           <a href="#founders" className="hover:text-white">Founders</a>
           <a href="#contact" className="hover:text-white">Contact</a>
